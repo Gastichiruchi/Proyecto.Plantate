@@ -238,7 +238,7 @@ footer .contenedor .links li a i {
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas: "item1 item2";
   grid-gap: 50px;
-  margin: 90px;
+  margin: 20px;
 }
 .contenedor-formulario .informacion-formulario {
   grid-area: item1;
