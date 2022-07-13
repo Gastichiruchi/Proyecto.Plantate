@@ -1,0 +1,71 @@
+
+
+
+
+.contenedor-formulario {
+    min-height: calc(100vh - 65px - 300px);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "item1 item2";
+    grid-gap: 50px;
+    margin: 90px;
+    .informacion-formulario{
+        grid-area: item1;
+        h2 {
+            @include marginFont(15px, 35px);
+        }
+        p {
+            @include marginFont(30px, 17px);
+            line-height: 1.6;
+        }
+        a {
+            @include marginFont(15px, 17px);
+            display: inline-block;
+            text-decoration: none;
+            width: 100%;
+            color: $bg6;
+            font-weight: 700;
+            i {
+                color: $bg2;
+                margin-right: 10px;
+            }
+        }
+
+    }
+    .form{
+        grid-area: item2;
+        .campo, textarea {
+            width: 100%;
+            padding: 15px 10px;
+            font-size: 15px;
+            border: 1px solid $bg7 ;
+            margin-bottom: 20px;
+            border-radius: 3px;
+            outline: 0px;
+        }
+        .btn-enviar{
+            padding: 15px;
+            font-size: 16px;
+            border: none;
+            outline: 0px;
+            background: $bg7;
+            color: $bg5;
+            border-radius: 3px;
+        }
+    }
+}
+
+@media screen and (max-width: 1050px){
+    .contenedor-formulario{
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-areas: 
+      "item1" 
+      "item2"
+      ;
+      grid-gap: 5px;
+    }
+    .form{
+      max-width: 700px;
+    }
+}

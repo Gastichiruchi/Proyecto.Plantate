@@ -1,0 +1,12 @@
+.imagen-aboutUs{
+    @include sizes(420px, 100%);
+    object-fit: cover;
+}
+
+.texto-aboutUs{
+    text-align: justify
+}
+
+.card-img-top{
+    object-fit: cover;
+ }

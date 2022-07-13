@@ -1,0 +1,119 @@
+@mixin sizes ($height, $width){
+    height: $height;
+    width: $width;
+}
+
+@mixin marginFont ($margin-bottom, $font-size){
+    margin-bottom: $margin-bottom;
+    font-size: $font-size;
+}
+
+.titular{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "sectionA sectionB";
+    grid-gap: 50px;
+    padding: 20px;
+    background-color: $bg5;
+    .titulo-titular{
+        grid-area: sectionA;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h1{
+            @include marginFont(5px, 35px);
+            color: $bg1;
+        }
+        p{
+            @include marginFont(30px, 17px);
+            line-height: 1.6;
+        }
+    }
+    .imagen-titular{
+        grid-area: sectionB;
+        display: flex;
+        align-items: center;
+        .subImagenTitular{
+            @include sizes(100%, 100%);
+        }
+    }
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    .sub-cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img {
+            box-shadow: 0 0 7px $bg3;
+            @include sizes(330px, 330px);
+        }
+        h3 {
+            font-size: 22px;
+            margin-top: 5px;
+        }
+        p {
+            color: $bg3;
+            margin-top: 5px;
+        }
+        button {
+            @include marginFont(10px, 15px);
+            padding: 18px 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: $bg2;
+            color: $bg4;
+            margin-top: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 1030px) {
+    main .cards {
+      flex-direction: column;
+      align-items: center;
+    }
+    .titular {
+        grid-template-columns: 1fr ;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+        "sectionA" 
+        "sectionB";
+        grid-gap: 5px;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    main header {
+      display: flex;
+      flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 402px) {
+    main .nav {
+      flex-direction: column;
+      align-items: center;
+    }
+    main .boton {
+      flex-direction: column;
+      align-items: center;
+    }
+    .subImagenTitular{
+        height: 100%;
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    main .sub-cards img {
+      height: 330px;
+      width: 330px;
+    }
+}

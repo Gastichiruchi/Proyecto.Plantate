@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.titular {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "sectionA sectionB";
+  grid-gap: 50px;
+  padding: 20px;
+  background-color: #efffec;
+}
+.titular .titulo-titular {
+  grid-area: sectionA;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.titular .titulo-titular h1 {
+  margin-bottom: 5px;
+  font-size: 35px;
+  color: #1E5128;
+}
+.titular .titulo-titular p {
+  margin-bottom: 30px;
+  font-size: 17px;
+  line-height: 1.6;
+}
+.titular .imagen-titular {
+  grid-area: sectionB;
+  display: flex;
+  align-items: center;
+}
+.titular .imagen-titular .subImagenTitular {
+  height: 100%;
+  width: 100%;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.cards .sub-cards, .cards footer .contenedor, footer .cards .contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cards .sub-cards img, .cards footer .contenedor img, footer .cards .contenedor img {
+  box-shadow: 0 0 7px #555;
+  height: 330px;
+  width: 330px;
+}
+.cards .sub-cards h3, .cards footer .contenedor h3, footer .cards .contenedor h3 {
+  font-size: 22px;
+  margin-top: 5px;
+}
+.cards .sub-cards p, .cards footer .contenedor p, footer .cards .contenedor p {
+  color: #555;
+  margin-top: 5px;
+}
+.cards .sub-cards button, .cards footer .contenedor button, footer .cards .contenedor button {
+  margin-bottom: 10px;
+  font-size: 15px;
+  padding: 18px 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4E9F3D;
+  color: #fff;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 1030px) {
+  main .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .titular {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "sectionA" "sectionB";
+    grid-gap: 5px;
+  }
+}
+@media screen and (max-width: 690px) {
+  main header {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 402px) {
+  main .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  main .boton {
+    flex-direction: column;
+    align-items: center;
+  }
+  .subImagenTitular {
+    height: 100%;
+    width: 300px;
+  }
+}
+@media screen and (max-width: 340px) {
+  main .sub-cards img, main footer .contenedor img, footer main .contenedor img {
+    height: 330px;
+    width: 330px;
+  }
+}
+footer {
+  background: #1E5128;
+  padding-top: 5px;
+  color: #fff;
+  font-family: "Ubuntu", sans-serif;
+}
+footer .contenedor {
+  text-align: center;
+}
+footer .contenedor h3 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 3rem;
+}
+footer .contenedor p {
+  max-width: 500PX;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 14px;
+}
+footer .contenedor .links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+}
+footer .contenedor .links li {
+  margin: 0 10px;
+}
+footer .contenedor .links li a {
+  color: #efffec;
+  text-decoration: none;
+}
+footer .contenedor .links li a i {
+  font-size: 1.1rem;
+}
+
+.titleShop {
+  text-align: center;
+  color: #555;
+  margin-top: 5px;
+}
+
+.section-novedades h2 {
+  font-size: 48px;
+  text-align: center;
+  color: black;
+  margin: 8px;
+}
+.section-novedades .novedades {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 300px);
+  grid-template-areas: "item4 item4 item5" "item2 item3 item5" "item2 item1 item1";
+  grid-gap: 10PX;
+  padding: 13px;
+}
+.section-novedades .novedades .item1 {
+  grid-area: item1;
+  position: relative;
+}
+.section-novedades .novedades .item2 {
+  grid-area: item2;
+  position: relative;
+}
+.section-novedades .novedades .item3 {
+  grid-area: item3;
+  position: relative;
+}
+.section-novedades .novedades .item4 {
+  grid-area: item4;
+  position: relative;
+}
+.section-novedades .novedades .item5 {
+  grid-area: item5;
+  position: relative;
+}
+.section-novedades .novedades .img-item {
+  height: 100%;
+  width: 100%;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.section-novedades .novedades .sub {
+  position: absolute;
+  margin: 0;
+  bottom: 0;
+  color: rgb(255, 255, 255);
+  background: rgb(81, 63, 63);
+  width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  .section-novedades .novedades {
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px;
+    grid-template-areas: "item4" "item5" "item3" "item2" "item1";
+  }
+}
+.imagen-aboutUs {
+  height: 420px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.texto-aboutUs {
+  text-align: justify;
+}
+
+.card-img-top {
+  object-fit: cover;
+}
+
+.contenedor-formulario {
+  min-height: calc(100vh - 65px - 300px);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "item1 item2";
+  grid-gap: 50px;
+  margin: 90px;
+}
+.contenedor-formulario .informacion-formulario {
+  grid-area: item1;
+}
+.contenedor-formulario .informacion-formulario h2 {
+  margin-bottom: 15px;
+  font-size: 35px;
+}
+.contenedor-formulario .informacion-formulario p {
+  margin-bottom: 30px;
+  font-size: 17px;
+  line-height: 1.6;
+}
+.contenedor-formulario .informacion-formulario a {
+  margin-bottom: 15px;
+  font-size: 17px;
+  display: inline-block;
+  text-decoration: none;
+  width: 100%;
+  color: black;
+  font-weight: 700;
+}
+.contenedor-formulario .informacion-formulario a i {
+  color: #4E9F3D;
+  margin-right: 10px;
+}
+.contenedor-formulario .form {
+  grid-area: item2;
+}
+.contenedor-formulario .form .campo, .contenedor-formulario .form textarea {
+  width: 100%;
+  padding: 15px 10px;
+  font-size: 15px;
+  border: 1px solid green;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  outline: 0px;
+}
+.contenedor-formulario .form .btn-enviar {
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  outline: 0px;
+  background: green;
+  color: #efffec;
+  border-radius: 3px;
+}
+
+@media screen and (max-width: 1050px) {
+  .contenedor-formulario {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "item1" "item2";
+    grid-gap: 5px;
+  }
+  .form {
+    max-width: 700px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
